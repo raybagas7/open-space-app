@@ -6,10 +6,9 @@ import LoginInput from '../components/LoginInput';
 import { asyncSetAuthUser } from '../states/authUser/action';
 
 function LoginPage() {
-  const dispatch = useDispatch(); // @TODO: get dispatch function from store
+  const dispatch = useDispatch();
 
   const onLogin = ({ id, password }) => {
-    // @TODO: dispatch async action to login
     dispatch(asyncSetAuthUser({ id, password }));
   };
 
@@ -26,7 +25,7 @@ function LoginPage() {
           ,
           {' '}
           <br />
-          Through Open Space.
+          Through Open Space App.
         </h2>
 
         <LoginInput login={onLogin} />
